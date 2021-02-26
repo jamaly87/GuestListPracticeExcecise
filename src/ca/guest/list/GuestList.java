@@ -11,8 +11,8 @@ public class GuestList {
         int id; //used to store guest id value. (used in guest ID search)
         String name; //used to store guest name. (used in name search)
         int choice = -1;
-        /*Creating two scanner variables to avoid confusion by storing
-        multiple values in a single variable.
+        /*Creating two scanner variables to avoid confusion that may occur
+         by storing multiple values in a single variable.
          */
         Scanner sc = new Scanner(System.in);
         Scanner input = new Scanner (System.in);
