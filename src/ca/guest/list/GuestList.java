@@ -11,6 +11,9 @@ public class GuestList {
         int id; //used to store guest id value. (used in guest ID search)
         String name; //used to store guest name. (used in name search)
         int choice = -1;
+        /*Creating two scanner variables to avoid confusion by storing
+        multiple values in a single variable.
+         */
         Scanner sc = new Scanner(System.in);
         Scanner input = new Scanner (System.in);
         while (choice!=0){
@@ -22,8 +25,9 @@ public class GuestList {
                     System.out.println("Exiting Program......\nGoodBye!");
                 } break;
                 case 1:{
+                    Scanner s = new Scanner(System.in); //Workaround to fix the name entry bug
                     System.out.println("Please Enter Guest Name: ");
-                    String guestName = input.next();
+                    String guestName = s.next();
                     try {
                         if (guestName.length()<=3)
                             throw new InvalidGuestName ("Name must be at least four Characters");
